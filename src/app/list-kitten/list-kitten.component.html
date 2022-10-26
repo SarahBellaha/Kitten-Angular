@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div *ngFor="let kitten of kittenList" class="kitten-card">
+    <img [src]="kitten.imageUrl" [alt]="kitten.name" class="kitten-img" />
+    <p *ngFor="let property of kitten | keyvalue: sortNull">
+      <span *ngIf="property.key !== 'imageUrl' && property.key !== 'id'">{{
+        property.value
+      }}</span>
+    </p>
+    <button type="button" (click)="addToUserList(kitten)">
+      Adopter ce chaton
+    </button>
+  </div>
+</div>

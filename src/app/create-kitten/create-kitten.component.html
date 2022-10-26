@@ -1,0 +1,58 @@
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && sendData()">
+  <fieldset>
+    <label for="name">Nom : </label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      [(ngModel)]="inputName"
+      required
+      #name="ngModel"
+    />
+    <div *ngIf="name.errors && myForm.submitted">
+      <span *ngIf="name.errors['required']">Nom du chat requis.</span>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <label for="race">Race : </label>
+    <input
+      id="race"
+      name="race"
+      type="text"
+      [(ngModel)]="inputRace"
+      required
+      #race="ngModel"
+    />
+    <div *ngIf="race.errors && myForm.submitted">
+      <span *ngIf="race.errors['required']">Race du chat requise.</span>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <label for="date">Date de naissance : </label>
+    <input
+      id="date"
+      name="date"
+      type="date"
+      [(ngModel)]="inputDate"
+      required
+      #date="ngModel"
+    />
+  </fieldset>
+
+  <fieldset>
+    <label for="imageUrl">Lien de la photo : </label>
+    <input
+      id="imageUrl"
+      name="imageUrl"
+      type="text"
+      [(ngModel)]="inputImageUrl"
+      #imageUrl="ngModel"
+    />
+    <!-- <div *ngIf="imageUrl.errors && myForm.submitted">
+      <span *ngIf="imageUrl.errors['required']">Photo du chat requise.</span>
+    </div> -->
+  </fieldset>
+  <button type="submit">✨ Ajouter un chaton ✨</button>
+</form>

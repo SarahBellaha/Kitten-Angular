@@ -1,0 +1,21 @@
+.kitten-img {
+    height: 120px;
+    width: 120px;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+p {
+    margin: 2px;
+}
+
+.kitten-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}

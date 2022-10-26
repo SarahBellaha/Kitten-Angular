@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    flex: 0.7;
+}
+
+.right {
+    flex: 0.3;
+}

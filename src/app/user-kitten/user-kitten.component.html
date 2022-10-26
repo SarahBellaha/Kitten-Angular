@@ -1,0 +1,5 @@
+<h1>Mes bébés 🐈</h1>
+<div *ngFor="let kitten of userList">
+  <img class="adopted-img" [src]="kitten.imageUrl" [alt]="kitten.name" />
+  <p>{{ kitten.name }}</p>
+</div>
